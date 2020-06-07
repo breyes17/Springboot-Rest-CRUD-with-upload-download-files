@@ -1,0 +1,100 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Spring Upload</title>
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="nav nav-tabs mt-5">
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#">Single File Upload</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron jumbotron-fluid">
+				  <div class="container">
+				    <h1 class="display-4">Basic Information with single file upload</h1>
+				    <p class="lead">A demo project for file upload/download</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="card">
+				  <div class="card-header">
+				    Basic Info
+				  </div>
+				  <div class="card-body">
+					<form id="basicInfoForm" enctype="multipart/form-data">
+					  <div class="form-group row">
+					    <label for="inputFirstName" class="col-sm-4 col-form-label">First name</label>
+					    <div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputFirstName" name="firstName" placeholder="Enter your firstname">
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    <label for="inputLastName" class="col-sm-4 col-form-label">Last name</label>
+					    <div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Enter your lastname">
+					    </div>
+					  </div>
+					  <div class="form-group custom-file">
+						  <input type="file" class="custom-file-input" id="customFile" name="attachedFile">
+						  <label class="custom-file-label" for="customFile">Choose file</label>
+					  </div>
+					  <div class="form-group row mt-4">
+					    <div class="col-sm-10">
+					      <button type="submit" id="submitBtn" class="btn btn-primary">Add Info</button>
+					    </div>
+					  </div>
+					</form>
+				  </div>
+				</div>
+				<!-- <div class="alert alert-success mt-2 fade show" role="alert">
+				  Success
+				</div> -->
+			</div>
+			<div class="col-md-7">
+				<table class="table table-hover table-sm">
+				  <thead>
+				    <tr>
+				      <th scope="col">First Name</th>
+				      <th scope="col">Last Name</th>
+				      <th scope="col">File Name</th>
+				      <th scope="col">Action</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" th:src="@{/js/file-one.js}"></script>
+  </body>
+</html>
